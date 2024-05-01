@@ -1,0 +1,304 @@
+Uri: https://branding.nsn.sa/
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\index.htm
+Content Type: text/html
+
+Uri: https://branding.nsn.sa/cdn-cgi/images/browser-bar.png?1376755637
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\cdn-cgi\images\browser-bar.png
+Content Type: image/png
+
+Uri: https://branding.nsn.sa/cdn-cgi/images/cf-icon-browser.png
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\cdn-cgi\images\cf-icon-browser.png
+Content Type: image/png
+
+Uri: https://branding.nsn.sa/cdn-cgi/images/cf-icon-cloud.png
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\cdn-cgi\images\cf-icon-cloud.png
+Content Type: image/png
+
+Uri: https://branding.nsn.sa/cdn-cgi/images/cf-icon-error.png
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\cdn-cgi\images\cf-icon-error.png
+Content Type: image/png
+
+Uri: https://branding.nsn.sa/cdn-cgi/images/cf-icon-horizontal-arrow.png
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\cdn-cgi\images\cf-icon-horizontal-arrow.png
+Content Type: image/png
+
+Uri: https://branding.nsn.sa/cdn-cgi/images/cf-icon-ok.png
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\cdn-cgi\images\cf-icon-ok.png
+Content Type: image/png
+
+Uri: https://branding.nsn.sa/cdn-cgi/images/cf-icon-server.png
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\cdn-cgi\images\cf-icon-server.png
+Content Type: image/png
+
+Uri: https://branding.nsn.sa/cdn-cgi/images/cf-no-screenshot-error.png
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\cdn-cgi\images\cf-no-screenshot-error.png
+Content Type: image/png
+
+Uri: https://branding.nsn.sa/cdn-cgi/images/cf-no-screenshot-warn.png
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\cdn-cgi\images\cf-no-screenshot-warn.png
+Content Type: image/png
+
+Uri: https://branding.nsn.sa/cdn-cgi/images/icon-exclamation.png?1376755637
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\cdn-cgi\images\icon-exclamation.png
+Content Type: image/png
+
+Uri: https://branding.nsn.sa/cdn-cgi/l/email-protection
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\cdn-cgi\l\email-protection.html
+Content Type: text/html
+
+Uri: https://branding.nsn.sa/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\cdn-cgi\scripts\5c5dd728\cloudflare-static\email-decode.min.js
+Content Type: application/javascript
+
+Uri: https://branding.nsn.sa/cdn-cgi/styles/cf.errors.css
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\cdn-cgi\styles\cf.errors.css
+Content Type: text/css
+
+Uri: https://branding.nsn.sa/css/aos.css
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\css\aos.css
+Content Type: text/css
+
+Uri: https://branding.nsn.sa/css/bootstrap.min.css
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\css\bootstrap.min.css
+Content Type: text/css
+
+Uri: https://branding.nsn.sa/css/fancybox.css
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\css\fancybox.css
+Content Type: text/css
+
+Uri: https://branding.nsn.sa/css/loading.css
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\css\loading.css
+Content Type: text/css
+
+Uri: https://branding.nsn.sa/css/style.css
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\css\style.css
+Content Type: text/css
+
+Uri: https://branding.nsn.sa/css/svg.css
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\css\svg.css
+Content Type: text/css
+
+Uri: https://branding.nsn.sa/css/swiper-bundle.min.css
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\css\swiper-bundle.min.css
+Content Type: text/css
+
+Uri: https://branding.nsn.sa/fonts/ArbFONTS-Montserrat-Arabic-Bold.ttf
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\fonts\ArbFONTS-Montserrat-Arabic-Bold.ttf
+Content Type: font/ttf
+
+Uri: https://branding.nsn.sa/fonts/ArbFONTS-Montserrat-Arabic-Light.ttf
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\fonts\ArbFONTS-Montserrat-Arabic-Light.ttf
+Content Type: font/ttf
+
+Uri: https://branding.nsn.sa/fonts/ArbFONTS-Montserrat-Arabic-Medium.ttf
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\fonts\ArbFONTS-Montserrat-Arabic-Medium.ttf
+Content Type: font/ttf
+
+Uri: https://branding.nsn.sa/fonts/ArbFONTS-Montserrat-Arabic-Regular.ttf
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\fonts\ArbFONTS-Montserrat-Arabic-Regular.ttf
+Content Type: font/ttf
+
+Uri: https://branding.nsn.sa/fonts/ArbFONTS-Montserrat-Arabic-SemiBold.ttf
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\fonts\ArbFONTS-Montserrat-Arabic-SemiBold.ttf
+Content Type: font/ttf
+
+Uri: https://branding.nsn.sa/images/1.png
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\images\1.png
+Content Type: image/png
+
+Uri: https://branding.nsn.sa/images/1.webp
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\images\1.webp
+Content Type: image/webp
+
+Uri: https://branding.nsn.sa/images/10.webp
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\images\10.webp
+Content Type: image/webp
+
+Uri: https://branding.nsn.sa/images/11.webp
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\images\11.webp
+Content Type: image/webp
+
+Uri: https://branding.nsn.sa/images/12.webp
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\images\12.webp
+Content Type: image/webp
+
+Uri: https://branding.nsn.sa/images/13.webp
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\images\13.webp
+Content Type: image/webp
+
+Uri: https://branding.nsn.sa/images/14.webp
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\images\14.webp
+Content Type: image/webp
+
+Uri: https://branding.nsn.sa/images/15.webp
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\images\15.webp
+Content Type: image/webp
+
+Uri: https://branding.nsn.sa/images/16.webp
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\images\16.webp
+Content Type: image/webp
+
+Uri: https://branding.nsn.sa/images/17.webp
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\images\17.webp
+Content Type: image/webp
+
+Uri: https://branding.nsn.sa/images/18.webp
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\images\18.webp
+Content Type: image/webp
+
+Uri: https://branding.nsn.sa/images/19.webp
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\images\19.webp
+Content Type: image/webp
+
+Uri: https://branding.nsn.sa/images/2.png
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\images\2.png
+Content Type: image/png
+
+Uri: https://branding.nsn.sa/images/2.webp
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\images\2.webp
+Content Type: image/webp
+
+Uri: https://branding.nsn.sa/images/20.webp
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\images\20.webp
+Content Type: image/webp
+
+Uri: https://branding.nsn.sa/images/3.png
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\images\3.png
+Content Type: image/png
+
+Uri: https://branding.nsn.sa/images/3.webp
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\images\3.webp
+Content Type: image/webp
+
+Uri: https://branding.nsn.sa/images/4.webp
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\images\4.webp
+Content Type: image/webp
+
+Uri: https://branding.nsn.sa/images/5.webp
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\images\5.webp
+Content Type: image/webp
+
+Uri: https://branding.nsn.sa/images/6.webp
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\images\6.webp
+Content Type: image/webp
+
+Uri: https://branding.nsn.sa/images/7.webp
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\images\7.webp
+Content Type: image/webp
+
+Uri: https://branding.nsn.sa/images/8.webp
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\images\8.webp
+Content Type: image/webp
+
+Uri: https://branding.nsn.sa/images/9.webp
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\images\9.webp
+Content Type: image/webp
+
+Uri: https://branding.nsn.sa/images/arrow.svg
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\images\arrow.svg
+Content Type: image/svg+xml
+
+Uri: https://branding.nsn.sa/images/curve.png
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\images\curve.png
+Content Type: image/png
+
+Uri: https://branding.nsn.sa/images/favicon.ico
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\images\favicon.ico
+Content Type: image/x-icon
+
+Uri: https://branding.nsn.sa/images/footer-bg.svg
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\images\footer-bg.svg
+Content Type: image/svg+xml
+
+Uri: https://branding.nsn.sa/images/footer-logo.png
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\images\footer-logo.png
+Content Type: image/png
+
+Uri: https://branding.nsn.sa/images/intro-curve.svg
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\images\intro-curve.svg
+Content Type: image/svg+xml
+
+Uri: https://branding.nsn.sa/images/logo.png
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\images\logo.png
+Content Type: image/png
+
+Uri: https://branding.nsn.sa/images/mada.svg
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\images\mada.svg
+Content Type: image/svg+xml
+
+Uri: https://branding.nsn.sa/images/mastercard.svg
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\images\mastercard.svg
+Content Type: image/svg+xml
+
+Uri: https://branding.nsn.sa/images/pay.svg
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\images\pay.svg
+Content Type: image/svg+xml
+
+Uri: https://branding.nsn.sa/images/stc.svg
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\images\stc.svg
+Content Type: image/svg+xml
+
+Uri: https://branding.nsn.sa/images/sudia.png
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\images\sudia.png
+Content Type: image/png
+
+Uri: https://branding.nsn.sa/images/symbol.svg
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\images\symbol.svg
+Content Type: image/svg+xml
+
+Uri: https://branding.nsn.sa/images/tick.svg
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\images\tick.svg
+Content Type: image/svg+xml
+
+Uri: https://branding.nsn.sa/images/visa.svg
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\images\visa.svg
+Content Type: image/svg+xml
+
+Uri: https://branding.nsn.sa/js/aos.js
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\js\aos.js
+Content Type: application/javascript
+
+Uri: https://branding.nsn.sa/js/bootstrap.bundle.min.js
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\js\bootstrap.bundle.min.js
+Content Type: application/javascript
+
+Uri: https://branding.nsn.sa/js/fancybox.umd.js
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\js\fancybox.umd.js
+Content Type: application/javascript
+
+Uri: https://branding.nsn.sa/js/jquery-2.2.2.min.js
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\js\jquery-2.2.2.min.js
+Content Type: application/javascript
+
+Uri: https://branding.nsn.sa/js/main.js
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\js\main.js
+Content Type: application/javascript
+
+Uri: https://branding.nsn.sa/js/swiper-bundle.min.js
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\js\swiper-bundle.min.js
+Content Type: application/javascript
+
+Uri: https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700&display=swap
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\css2
+Content Type: text/css
+
+Uri: https://fonts.gstatic.com/s/alexandria/v3/UMBCrPdDqW66y0Y2usFeQCH18mulUxBvI9ocSabH.ttf
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\s\alexandria\v3\UMBCrPdDqW66y0Y2usFeQCH18mulUxBvI9ocSabH.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/alexandria/v3/UMBCrPdDqW66y0Y2usFeQCH18mulUxBvI9olSabH.ttf
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\s\alexandria\v3\UMBCrPdDqW66y0Y2usFeQCH18mulUxBvI9olSabH.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/alexandria/v3/UMBCrPdDqW66y0Y2usFeQCH18mulUxBvI9qlTqbH.ttf
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\s\alexandria\v3\UMBCrPdDqW66y0Y2usFeQCH18mulUxBvI9qlTqbH.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/alexandria/v3/UMBCrPdDqW66y0Y2usFeQCH18mulUxBvI9r7TqbH.ttf
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\s\alexandria\v3\UMBCrPdDqW66y0Y2usFeQCH18mulUxBvI9r7TqbH.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/alexandria/v3/UMBCrPdDqW66y0Y2usFeQCH18mulUxBvI9rJTqbH.ttf
+File Name: C:\Downloaded Web Sites\branding.nsn.sa\s\alexandria\v3\UMBCrPdDqW66y0Y2usFeQCH18mulUxBvI9rJTqbH.ttf
+Content Type: font/ttf
+

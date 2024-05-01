@@ -129,7 +129,12 @@ ul {
 .intro-section .circle {
   position: absolute;
   border-radius: 50%;
-  background: linear-gradient(101deg, rgba(98, 62, 151, 0.5) 0%, rgba(139, 59, 149, 0.2) 50%, rgba(254, 248, 251, 0.1) 100%);
+  background: linear-gradient(
+    101deg,
+    rgba(98, 62, 151, 0.5) 0%,
+    rgba(139, 59, 149, 0.2) 50%,
+    rgba(254, 248, 251, 0.1) 100%
+  );
 }
 @media (max-width: 625px) {
   .intro-section .circle {
@@ -232,7 +237,7 @@ ul {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 @media (max-width: 625px) {
   .intro-section .intro-content .logo-img {
@@ -246,7 +251,7 @@ ul {
   gap: 25px;
   flex-wrap: nowrap;
   justify-content: center;
-  align-items: center
+  align-items: center;
 }
 @media (max-width: 768px) {
   .intro-section .intro-content .discount-details .dicount-title {
@@ -261,12 +266,21 @@ ul {
   padding: 5px;
 }
 @media (max-width: 625px) {
-  .intro-section .intro-content .discount-details .dicount-title .discount-value {
+  .intro-section
+    .intro-content
+    .discount-details
+    .dicount-title
+    .discount-value {
     border-radius: 15px;
     padding: 3px;
   }
 }
-.intro-section .intro-content .discount-details .dicount-title .discount-value .inner {
+.intro-section
+  .intro-content
+  .discount-details
+  .dicount-title
+  .discount-value
+  .inner {
   position: relative;
   z-index: 1;
   background: #ef5da8;
@@ -274,29 +288,53 @@ ul {
   padding: 5px 30px;
   text-align: center;
 }
-.intro-section .intro-content .discount-details .dicount-title .discount-value p {
+.intro-section
+  .intro-content
+  .discount-details
+  .dicount-title
+  .discount-value
+  p {
   color: #fff;
   font-size: 48px;
   font-family: "mont-light";
   margin-bottom: 0px;
 }
 @media (max-width: 625px) {
-  .intro-section .intro-content .discount-details .dicount-title .discount-value p {
+  .intro-section
+    .intro-content
+    .discount-details
+    .dicount-title
+    .discount-value
+    p {
     font-size: 15px;
   }
 }
-.intro-section .intro-content .discount-details .dicount-title .discount-value h4 {
+.intro-section
+  .intro-content
+  .discount-details
+  .dicount-title
+  .discount-value
+  h4 {
   color: #fff;
   font-size: 55px;
   font-family: "mont-bold";
 }
 @media (max-width: 625px) {
-  .intro-section .intro-content .discount-details .dicount-title .discount-value h4 {
+  .intro-section
+    .intro-content
+    .discount-details
+    .dicount-title
+    .discount-value
+    h4 {
     margin: 0;
     font-size: 25px;
   }
 }
-.intro-section .intro-content .discount-details .dicount-title .discount-value::after {
+.intro-section
+  .intro-content
+  .discount-details
+  .dicount-title
+  .discount-value::after {
   content: "";
   position: absolute;
   z-index: -2;
@@ -308,7 +346,12 @@ ul {
   background-repeat: no-repeat;
   background-size: 50% 50%, 50% 50%;
   background-position: 0 0, 100% 0, 100% 100%, 0 100%;
-  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgb(239, 93, 168) 50%, rgba(255, 255, 255, 0) 100%);
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgb(239, 93, 168) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
   animation: rotate 2s linear infinite;
 }
 @keyframes rotate {
@@ -317,11 +360,20 @@ ul {
   }
 }
 @media (max-width: 768px) {
-  .intro-section .intro-content .discount-details .dicount-title .discount-text {
+  .intro-section
+    .intro-content
+    .discount-details
+    .dicount-title
+    .discount-text {
     text-align: center;
   }
 }
-.intro-section .intro-content .discount-details .dicount-title .discount-text p {
+.intro-section
+  .intro-content
+  .discount-details
+  .dicount-title
+  .discount-text
+  p {
   color: #623e97;
   font-family: "mont-medium";
   font-size: 41px;
@@ -329,7 +381,12 @@ ul {
   line-height: 1.5;
 }
 @media (max-width: 625px) {
-  .intro-section .intro-content .discount-details .dicount-title .discount-text p {
+  .intro-section
+    .intro-content
+    .discount-details
+    .dicount-title
+    .discount-text
+    p {
     font-size: 20px;
   }
 }
@@ -502,7 +559,7 @@ ul {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   position: absolute;
   inset: 0;
 }
@@ -631,11 +688,14 @@ ul {
   .samples-section .slider-item {
     min-height: 250px;
   }
-  .samples-section .slider-item h3, .samples-section .slider-item .swiper-slide h3 a, .samples-section .swiper-slide h3 .slider-item a {
+  .samples-section .slider-item h3,
+  .samples-section .slider-item .swiper-slide h3 a,
+  .samples-section .swiper-slide h3 .slider-item a {
     font-size: 18px !important;
   }
 }
-.samples-section .swiper-slide h3, .samples-section .swiper-slide h3 a {
+.samples-section .swiper-slide h3,
+.samples-section .swiper-slide h3 a {
   opacity: 0;
   color: #623e97;
   text-align: center;
@@ -645,10 +705,13 @@ ul {
   cursor: pointer;
   transition: all 0.5s ease-in-out;
 }
-.samples-section .swiper-slide-active h3, .samples-section .swiper-slide-active .swiper-slide h3 a, .samples-section .swiper-slide h3 .swiper-slide-active a {
+.samples-section .swiper-slide-active h3,
+.samples-section .swiper-slide-active .swiper-slide h3 a,
+.samples-section .swiper-slide h3 .swiper-slide-active a {
   opacity: 1 !important;
 }
-.samples-section .swiper-slide-active h3 a, .samples-section .swiper-slide h3 .swiper-slide-active a a {
+.samples-section .swiper-slide-active h3 a,
+.samples-section .swiper-slide h3 .swiper-slide-active a a {
   opacity: 1;
 }
 .samples-section .discount-bttn {
@@ -731,7 +794,8 @@ ul {
   border-radius: 10px;
   font-size: 13px;
 }
-.getService-section .form-group input::-moz-placeholder, .getService-section .form-group select::-moz-placeholder {
+.getService-section .form-group input::-moz-placeholder,
+.getService-section .form-group select::-moz-placeholder {
   padding: 10px 5px;
   color: #999;
   font-family: "mont-reg";
@@ -913,7 +977,7 @@ ul {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .footer-section .footer-intro {
   color: #fff;
@@ -1092,7 +1156,7 @@ ul {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 @media (max-width: 991px) {
   .footer-section .rights-section .sudia-commerce {
@@ -1122,7 +1186,7 @@ ul {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 @media (max-width: 768px) {
   .footer-section .row {
@@ -1178,7 +1242,7 @@ ul {
 }
 
 @media (max-width: 625px) {
-  [data-aos^=fade][data-aos^=fade] {
+  [data-aos^="fade"][data-aos^="fade"] {
     opacity: 1 !important;
     transform: none !important;
   }
@@ -1431,7 +1495,13 @@ ul {
   border-radius: 50%;
   border: 0px solid transparent;
 }
-.packages-section .optional-section .optional-options .optional-list li span img {
+.packages-section
+  .optional-section
+  .optional-options
+  .optional-list
+  li
+  span
+  img {
   width: 100%;
   height: 100%;
 }
@@ -1568,7 +1638,9 @@ ul {
     font-size: 20px;
   }
 }
-.services-section h3, .services-section .samples-section .swiper-slide h3 a, .samples-section .swiper-slide h3 .services-section a {
+.services-section h3,
+.services-section .samples-section .swiper-slide h3 a,
+.samples-section .swiper-slide h3 .services-section a {
   margin-top: 50px;
   text-align: center;
   font-size: 20px;
@@ -1577,7 +1649,9 @@ ul {
   line-height: 1.7;
 }
 @media (max-width: 625px) {
-  .services-section h3, .services-section .samples-section .swiper-slide h3 a, .samples-section .swiper-slide h3 .services-section a {
+  .services-section h3,
+  .services-section .samples-section .swiper-slide h3 a,
+  .samples-section .swiper-slide h3 .services-section a {
     margin-top: 30px;
     font-family: "mont-medium";
     font-size: 16px;
@@ -1660,9 +1734,7 @@ ul {
 }
 .services-section .service-card ul li:last-child {
   margin-bottom: 0;
-}/*# sourceMappingURL=style.css.map */
-
-
+} /*# sourceMappingURL=style.css.map */
 
 /* whatsapp window */
 
@@ -1852,4 +1924,17 @@ ul {
   &:hover {
     background-color: #08e659;
   }
+}
+
+/* Form */
+.form-control {
+  appearance: auto;
+}
+
+.form-check-label {
+  color: #444;
+}
+
+.cust {
+  margin-bottom: 30px;
 }

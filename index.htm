@@ -403,7 +403,7 @@
     <section class="getService-section" id="contact">
       <div class="container">
         <h4>اطلب خدمتك الان</h4>
-        <form>
+        <form name="submit-to-google-sheet">
           <div class="row">
             <div class="col-md-6 col-12">
               <div class="form-group">
@@ -412,7 +412,8 @@
                   type="text"
                   class="form-control"
                   placeholder="اكتب اسمك"
-                  name="firstName"
+                  name="name"
+                  required
                 />
               </div>
             </div>
@@ -425,7 +426,8 @@
                   type="tel"
                   class="form-control"
                   placeholder="اكتب رقم جوالك"
-                  name="phoneNumber"
+                  name="phone"
+                  required
                 />
               </div>
             </div>
@@ -433,54 +435,93 @@
             <div class="col-md-6 col-12">
               <div class="form-group">
                 <label>نوع الجوال</label>
-                <!-- <input type="email" class="form-control" placeholder="اكتب بريدك الالكترونى" name="email"> -->
-                <select class="form-control" name="">
+                <select class="form-control" name="type" required>
                   <option value="">اختر أحد الخيارات</option>
-                  <option value="ipad-7-8-9">(iPad (7-8-9</option>
-                  <option value="ipad-air1-5-6">(iPad (Air1 - 5 - 6</option>
-                  <option value="ipad-pro-9-7-air-3">
-                    (iPad (pro 9.7-Air 3
+                  <option dir="ltr" value="iPhone 15 Pro Max">
+                    iPhone 15 Pro Max
                   </option>
-                  <option value="ipad-mini-4-5">(iPad Mini (4-5</option>
-                  <option value="ipad-air2">iPad Air2</option>
-                  <option value="ipad-air4">iPad Air4</option>
-                  <option value="ipad-mini-6">iPad Mini (6)</option>
-                  <option value="ipad-pro-10-5">iPad Pro 10.5</option>
-                  <option value="ipad-pro-11inch-2018">
-                    iPad Pro 11inch 2018
+                  <option dir="ltr" value="iPhone 15 Pro">iPhone 15 Pro</option>
+                  <option dir="ltr" value="iPhone 15 Plus">
+                    iPhone 15 Plus
                   </option>
-                  <option value="ipad-pro-11inch-2021">
-                    iPad Pro 11inch 2021
+                  <option dir="ltr" value="iPhone 15">iPhone 15</option>
+                  <option dir="ltr" value="iPhone 14 Pro Max">
+                    iPhone 14 Pro Max
                   </option>
-                  <option value="ipad-air-4-5">ipad-air-4-5</option>
-                  <option value="iphone-11">iPhone 11</option>
-                  <option value="iphone-11-pro">iPhone 11 PRO</option>
-                  <option value="iphone-11-pro-max">iPhone 11 pro max</option>
-                  <option value="iphone-12-mini">iPhone 12 mini</option>
-                  <option value="iphone-12">iPhone 12</option>
-                  <option value="iphone-12-pro">iPhone 12 pro</option>
-                  <option value="iphone-12-pro-max">iPhone 12 pro max</option>
-                  <option value="iphone-13">iPhone 13</option>
-                  <option value="iphone-13-mini">iPhone 13 mini</option>
-                  <option value="iphone-13-pro">iphone 13 pro</option>
-                  <option value="iphone-13-pro-max">iphone 13 pro max</option>
-                  <option value="iphone-14">iphone 14</option>
-                  <option value="iphone-14-plus">iphone 14 plus</option>
-                  <option value="iphone-14-pro">iPhone 14 Pro</option>
-                  <option value="iphone-14-pro-max">iPhone 14 Pro Max</option>
-                  <option value="iphone-6g">iphone 6G</option>
-                  <option value="iphone-6p">iphone 6P</option>
-                  <option value="iphone-6s">iphone 6S</option>
-                  <option value="iphone-6sp">iphone 6SP</option>
-                  <option value="iphone-7-plus">iPhone 7 plus</option>
-                  <option value="iphone-7g">iPhone 7G</option>
-                  <option value="iphone-8-plus">iPhone 8 plus</option>
-                  <option value="iphone-8g">iPhone 8G</option>
-                  <option value="iphone-se">iPhone SE</option>
-                  <option value="iphone-x">iPhone X</option>
-                  <option value="iphone-xr">iPhone XR</option>
-                  <option value="iphone-xs">iPhone XS</option>
-                  <option value="iphone-xs-max">iPhone XS Max</option>
+                  <option dir="ltr" value="iPhone 14 Pro">iPhone 14 Pro</option>
+                  <option dir="ltr" value="iPhone 14 Plus">
+                    iPhone 14 Plus
+                  </option>
+                  <option dir="ltr" value="iPhone 14">iPhone 14</option>
+
+                  <option dir="ltr" value="iPhone SE (3rd Gen)">
+                    iPhone SE (3rd generation)
+                  </option>
+                  <option dir="ltr" value="iPhone 13 Pro Max">
+                    iPhone 13 Pro Max
+                  </option>
+                  <option dir="ltr" value="iPhone 13 Pro">iPhone 13 Pro</option>
+                  <option dir="ltr" value="iPhone 13 Mini">
+                    iPhone 13 Mini
+                  </option>
+                  <option dir="ltr" value="iPhone 13">iPhone 13</option>
+                  <option dir="ltr" value="iPhone 12 Pro Max">
+                    iPhone 12 Pro Max
+                  </option>
+                  <option dir="ltr" value="iPhone 12 Pro">iPhone 12 Pro</option>
+                  <option dir="ltr" value="iPhone 12 Mini">
+                    iPhone 12 Mini
+                  </option>
+                  <option dir="ltr" value="iPhone 12">iPhone 12</option>
+                  <option dir="ltr" value="iPhone SE (2nd Gen)">
+                    iPhone SE (2nd generation)
+                  </option>
+                  <option dir="ltr" value="iPhone 11 Pro Max">
+                    iPhone 11 Pro Max
+                  </option>
+                  <option dir="ltr" value="iPhone 11 Pro">iPhone 11 Pro</option>
+                  <option dir="ltr" value="iPhone 11">iPhone 11</option>
+                  <option dir="ltr" value="iPhone XS Max">iPhone XS Max</option>
+                  <option dir="ltr" value="iPhone XS">iPhone XS</option>
+                  <option dir="ltr" value="iPhone XR">iPhone XR</option>
+                  <option dir="ltr" value="iPhone X">iPhone X</option>
+                  <option dir="ltr" value="iPhone 8 Plus">iPhone 8 Plus</option>
+                  <option dir="ltr" value="iPhone 8">iPhone 8</option>
+                  <option dir="ltr" value="iPhone 7 Plus">iPhone 7 Plus</option>
+                  <option dir="ltr" value="iPhone 7">iPhone 7</option>
+                  <option dir="ltr" value="iPhone SE">
+                    iPhone SE (1st generation)
+                  </option>
+                  <option dir="ltr" value="iPhone 6s Plus">
+                    iPhone 6S Plus
+                  </option>
+                  <option dir="ltr" value="iPhone 6s">iPhone 6S</option>
+
+                  <optgroup dir="ltr" label="──────────"></optgroup>
+
+                  <option value="ipad-7-8-9" dir="ltr">iPad (7, 8, 9)</option>
+                  <option value="ipad-air1-5-6" dir="ltr">
+                    iPad Air (1, 5, 6)
+                  </option>
+                  <option value="ipad-pro-9-7-air-3" dir="ltr">
+                    iPad Pro (9.7), iPad Air (3)
+                  </option>
+                  <option value="ipad-mini-4-5" dir="ltr">
+                    iPad Mini (4, 5)
+                  </option>
+                  <option value="ipad-air2" dir="ltr">iPad Air 2</option>
+                  <option value="ipad-air4" dir="ltr">iPad Air 4</option>
+                  <option value="ipad-mini-6" dir="ltr">iPad Mini 6</option>
+                  <option value="ipad-pro-10-5" dir="ltr">iPad Pro 10.5</option>
+                  <option value="ipad-pro-11inch-2018" dir="ltr">
+                    iPad Pro 11-inch (2018)
+                  </option>
+                  <option value="ipad-pro-11inch-2021" dir="ltr">
+                    iPad Pro 11-inch (2021)
+                  </option>
+                  <option value="ipad-air-4-5" dir="ltr">
+                    iPad Air (4, 5)
+                  </option>
                 </select>
               </div>
             </div>
@@ -488,25 +529,25 @@
             <div class="col-md-6 col-12">
               <div class="form-group">
                 <label>الخدمة المطلوبة</label>
-                <select class="form-control" name="">
+                <select class="form-control" name="service" required>
                   <option value="">اختر أحد الخيارات</option>
-                  <option value="صيانة كسر الخلفية الزجاجية">
-                    صيانة كسر الخلفية الزجاجية
-                  </option>
                   <option value="صيانة الشاشة">صيانة الشاشة</option>
+                  <option value="صيانة البطارية">صيانة البطارية</option>
+                  <option value="صيانة مدخل الشحن">صيانة مدخل الشحن</option>
+                  <option value="صيانه الكاميرا الخلفية">
+                    صيانه الكاميرا الخلفية
+                  </option>
                   <option value="صيانة الكاميرا الأمامية">
                     صيانة الكاميرا الأمامية
                   </option>
-                  <option value="صيانه الكاميرا الخلفية">
-                    صيانه الكاميرا الخلفية
+                  <option value="صيانة السماعات العلوية">
+                    صيانة السماعات العلوية
                   </option>
                   <option value="صيانه زجاج الكاميرا الخلفيه">
                     صيانه زجاج الكاميرا الخلفيه
                   </option>
-                  <option value="صيانة مدخل الشحن">صيانة مدخل الشحن</option>
-                  <option value="صيانة البطارية">صيانة البطارية</option>
-                  <option value="صيانة السماعات العلوية">
-                    صيانة السماعات العلوية
+                  <option value="صيانة كسر الخلفية الزجاجية">
+                    صيانة كسر الخلفية الزجاجية
                   </option>
                 </select>
               </div>
@@ -517,9 +558,10 @@
                 <input
                   class="form-check-input"
                   type="radio"
-                  name="exampleRadios"
+                  name="direction"
                   id="exampleRadios1"
                   value="شمال الرياض"
+                  required
                 />
                 <label class="form-check-label" for="exampleRadios1">
                   شمال الرياض
@@ -529,9 +571,10 @@
                 <input
                   class="form-check-input"
                   type="radio"
-                  name="exampleRadios"
+                  name="direction"
                   id="exampleRadios2"
                   value="شرق الرياض"
+                  required
                 />
                 <label class="form-check-label" for="exampleRadios2">
                   شرق الرياض
@@ -544,15 +587,17 @@
                 <label>الحي</label>
                 <textarea
                   rows="8"
-                  placeholder="اكتب العنوان بالتفصيل"
+                  placeholder="اكتب عنوان الحي بالتفصيل"
                   class="form-control"
-                  name="message"
+                  name="hood"
+                  required
                 ></textarea>
               </div>
             </div>
           </div>
 
           <button
+            id="btn"
             type="submit"
             class="contact-bttn"
             data-aos="fade-up"
@@ -561,6 +606,16 @@
           >
             ارسال
           </button>
+
+          <!-- Submit overlay -->
+          <div id="form_overlay">
+            <div>
+              <img src="./images/thankyou.png" alt="thank you" />
+            </div>
+            <h2>شكراً</h2>
+            <h3>تم ارسال طلبك</h3>
+            <h3>سيتم التواصل معكم قريبا</h3>
+          </div>
         </form>
       </div>
     </section>
@@ -850,6 +905,33 @@
       const whatsappBtnClick = () => {
         document.getElementById("Window").classList.toggle("hideShowWinow");
       };
+
+      // Submit form to google sheets
+      const form = document.forms["submit-to-google-sheet"];
+      const overlay = document.getElementById("form_overlay");
+      const btn = document.getElementById("btn");
+
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbwW9CmXBctrl8NCnGBUp9qCDGGhesqu6q6vf2zeb6D8p0R9jVUkOa4rZKsC_mlRP3o_/exec";
+
+      form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+        btn.innerHTML =
+          '<span class="spinner-border spinner-border-sm" aria-hidden="true"></span>';
+
+        try {
+          const res = await fetch(scriptURL, {
+            method: "POST",
+            body: new FormData(form),
+          });
+          // console.log("Success!", res);
+          overlay.style.height = "100%";
+        } catch (error) {
+          console.error("Error!", error.message);
+          btn.innerHTML = "ارسال";
+          alert(error);
+        }
+      });
     </script>
   </body>
 </html>

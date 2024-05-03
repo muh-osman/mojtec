@@ -238,7 +238,9 @@ ul {
   height: 100%;
   -o-object-fit: contain;
   object-fit: contain;
+  filter: contrast(125%) brightness(0.9);
 }
+
 @media (max-width: 625px) {
   .intro-section .intro-content .logo-img {
     width: 100px;
@@ -1026,13 +1028,16 @@ ul {
   list-style-position: inside;
   margin-bottom: 10px;
 }
-.footer-section .help-list ul li a {
+.footer-section .help-list ul li a,
+.footer-section .help-list ul li button {
   color: #fff;
   font-size: 14px;
   font-family: "mont-light";
+  background-color: transparent;
 }
 @media (max-width: 991px) {
-  .footer-section .help-list ul li a {
+  .footer-section .help-list ul li a,
+  .footer-section .help-list ul li button {
     font-size: 13px;
   }
 }
@@ -1665,6 +1670,7 @@ ul {
   border-radius: 5px;
   transition: 0.3s;
   min-height: 415px;
+  background-color: #fef8fb;
 }
 @media (max-width: 768px) {
   .services-section .service-card {
@@ -1703,14 +1709,16 @@ ul {
   }
 }
 .services-section .service-card h4 {
-  color: #623e97;
+  /* color: #623e97; */
   text-align: center;
   font-size: 25px;
   font-weight: 400;
+  color: #282828;
+  font-family: "mont-bold";
 }
 @media (max-width: 625px) {
   .services-section .service-card h4 {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.5;
     margin-bottom: 0;
   }
@@ -1723,10 +1731,14 @@ ul {
   position: relative;
   margin-bottom: 10px;
   padding-inline-start: 20px;
-  color: #000;
+  /* color: #000; */
   font-size: 15px;
   font-family: "mont-light";
   line-height: 1.7;
+  color: #7c3d96;
+  font-size: 16px;
+  line-height: 1.7;
+  font-family: "mont-medium";
 }
 .services-section .service-card ul li::before {
   content: "-";
@@ -1977,4 +1989,12 @@ form {
     font-weight: 600;
     color: #707171;
   }
+}
+
+/* modal */
+.modal h6 {
+  color: #777;
+  margin-bottom: 16px;
+  line-height: 1.6;
+  font-size: 13px;
 }

@@ -371,7 +371,6 @@
               </div>
               <h4>أوقات العمل</h4>
               <ul>
-                <li>نعمل على مدار الاسبوع:</li>
                 <li>السبت من 3 عصرا حتى 11 مساء</li>
                 <li>الاحد من 3 عصرا حتى 11 مساء</li>
                 <li>الاثنين من 3 عصرا حتى 11 مساء</li>
@@ -395,7 +394,9 @@
               </div>
               <h4>طرق الدفع والحجز</h4>
               <ul>
-                <li>متوفر جميع طرق الدفع كاش أو شبكة (فيزا - ماستر - مدى)</li>
+                <li>متوفر جميع طرق الدفع:</li>
+                <li>كاش</li>
+                <li>شبكة (فيزا - ماستر - مدى)</li>
                 <li>الحجز يتم بطلب مسبق</li>
               </ul>
             </div>
@@ -794,19 +795,15 @@
                   <h4>روابط هامة</h4>
                   <ul>
                     <li>
-                      <a
-                        href="https://mojtec.com/%D8%B3%D9%8A%D8%A7%D8%B3%D8%A9-%D8%A7%D9%84%D8%B6%D9%85%D8%A7%D9%86/"
-                      >
+                      <button id="warnti-police" onclick="openReturn()">
                         سياسة الضمان
-                      </a>
+                      </button>
                     </li>
 
                     <li>
-                      <a
-                        href="https://mojtec.com/%D8%B3%D9%8A%D8%A7%D8%B3%D9%87-%D8%A7%D9%84%D8%A5%D8%B3%D8%AA%D8%B1%D8%AC%D8%A7%D8%B9/"
-                      >
+                      <button id="return-police" onclick="openWarnti()">
                         سياسة الاسترجاع
-                      </a>
+                      </button>
                     </li>
                   </ul>
                 </div>
@@ -981,6 +978,126 @@
       </a>
     </div> -->
 
+    <!-- popup modal -->
+    <div
+      class="modal fade"
+      id="war"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5 m-auto" id="exampleModalLabel">
+              سياسه الإسترجاع
+            </h1>
+          </div>
+          <div class="modal-body">
+            <h6>يحق للعميل إلغاء الطلب في أي وقت قبل إتمام عملية التوصيل.</h6>
+            <h6>
+              يحق للعميل رفع طلب استبدال أو استرجاع للمنتج في حالة وجود مشكلة في
+              الطلب من قبل البائع أو كان الطلب غير موافق للمواصفات المعلن عنها
+              وذلك خلال 12 يوم عمل على أن يكون المنتج في حالته الأصلية.
+            </h6>
+            <h6>
+              في حالة وجود مشكلة في المنتج يجب على العميل رفع شكوى على الموقع من
+              خلال الرابط التالي:
+
+              <a href="mailto:aasdx66mm@gmail.com">aasdx66mm@gmail.com</a>
+            </h6>
+            <h6>
+              سيتم التواصل مع العميل خلال 3 أيام عمل لجدولة موعد لتنفيذ الخدمة.
+            </h6>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary discount-bttn m-auto"
+              data-bs-dismiss="modal"
+            >
+              موافق
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="ret"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5 m-auto" id="exampleModalLabel">
+              سياسة الضمان
+            </h1>
+          </div>
+          <div class="modal-body">
+            <h6>
+              ضمان المنتج وجودة الصنع مقدّم من الشركة الضامنة، وهي الشركة
+              المصنعة أو وكيلها في المملكة في حال عدم تواجدها، وهو خاضع لسياسات
+              الشركة المصنّعة والموضحة في دليل الضمان الخاص بالمنتج أو الموقع
+              الإلكتروني الخاص بالشركة المصنعة للحصول على خدمات الضمان والصيانة،
+              يمكن للعميل التواصل مع مقدم خدمة الضمان مباشرة للحصول على الخدمة
+              المطلوبة وفقاً للأنظمة واللوائح.
+            </h6>
+            <h6>
+              خدمات الضمان والصيانة المقدمة من مقدم خدمة الضمان لا تعتبر من
+              مسؤولية مؤسسة موج تيك ويشمل ذلك توافر قطع الغيار وزمن الإصلاح
+              وجودة الخدمة، بالإضافة لتكاليف الإصلاح وجميع أنواع التعويض
+              والشكاوى. يمكن للعميل التواصل مباشرة مع مقدم خدمة الضمان في حال
+              وجود أي شكوى أو مطالبة.
+            </h6>
+            <h6>
+              لضمان أعلى مستويات الخدمة، تقدم مؤسسة موج تيك ضمانها الخاص على بعض
+              المنتجات.
+            </h6>
+            <h6>الأحكام العامة للضمان:</h6>
+            <h6>
+              1- يستغرق زمن الإصلاح (14) يوماً كحد أقصى للأعطال المشمولة بالضمان
+              ويستثنى منها فترة توصيل قطع الغيار من الشركة المصنعة. *
+            </h6>
+            <h6>
+              2- يغطي الضمان خدمة إصلاح أو استبدال قطع الغيار مجاناً في حال وجود
+              عيب مصنعي ولا يعني الضمان استبدال المنتج أو إرجاع قيمته ويستثنى من
+              خدمة الضمان الأعطال الناتجة عن:
+            </h6>
+            <h6 class="me-4">
+              أ- الكسور أو الضربات أو القطع أو تعرض المنتج لعوامل خارجية
+              كالسوائل أو الرطوبة أو الحرارة العالية.
+            </h6>
+            <h6 class="me-4">
+              ب- محاولات الإصلاح أو عمليات الصيانة من قبل جهات غير معتمدة من
+              الشركة الضامنة أو استخدام قطع غيار غير معتمدة من هيئة المواصفات
+              والمقاييس.
+            </h6>
+            <h6>
+              3- أعطال نظام التشغيل أو الأعطال البرمجية سواء كانت ناتجة من
+              تطبيقات مثبتة من قبل العميل، او من تطبيقات مثبتة مسبقا على الجهاز.
+            </h6>
+            <h6>
+              4- مسح ملفات نظام التشغيل أو أقسام من القرص الصلب أو الأعطال
+              الناتجة عن الفيروسات.
+            </h6>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary discount-bttn m-auto"
+              data-bs-dismiss="modal"
+            >
+              موافق
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> -->
     <script src="js/jquery-2.2.2.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
@@ -1031,6 +1148,17 @@
           alert(error);
         }
       });
+
+      // popup modal
+      function openWarnti() {
+        var myModal = new bootstrap.Modal(document.getElementById("war"));
+        myModal.show();
+      }
+
+      function openReturn() {
+        var myModal = new bootstrap.Modal(document.getElementById("ret"));
+        myModal.show();
+      }
     </script>
   </body>
 </html>

@@ -1,47 +1,59 @@
 import style from "./Dashboard.module.scss";
+import React, { useEffect, useState } from "react";
+// API
+import api from "../../Utils/Api";
 
 export default function Dashboard() {
+  // State to store the fetched data
+  const [serviceMatrix, setServiceMatrix] = useState({
+    models: [],
+    services: [],
+    matrix: [],
+  });
 
+  const fetchData = async () => {
+    try {
+      const res = await api.get(`api/set-price`);
+      // Extract models and services
+      const models = Object.keys(res.data);
+      const services = Object.keys(res.data[models[0]] || {});
+      // Create a matrix of prices
+      const matrix = models.map((model) => {
+        return services.map((service) => res.data[model][service] || "N/A");
+      });
+      setServiceMatrix({ models, services, matrix });
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
-
-  
-
-
-
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   return (
     <div className={style.container}>
       <table className="table table-striped">
-
         <thead>
           <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
+            <th scope="col"></th>
+            {serviceMatrix.services.map((service, index) => (
+              <th key={index} scope="col">
+                {service}
+              </th>
+            ))}
           </tr>
         </thead>
-
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td colSpan={2}>Larry the Bird</td>
-            <td>@twitter</td>
-          </tr>
+          {serviceMatrix.matrix.map((row, rowIndex) => (
+            <tr key={rowIndex}>
+              <th scope="row">{serviceMatrix.models[rowIndex]}</th>
+              {row.map((price, priceIndex) => (
+                <td key={priceIndex}>{price}</td>
+              ))}
+            </tr>
+          ))}
         </tbody>
-
       </table>
     </div>
   );

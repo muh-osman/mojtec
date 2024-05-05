@@ -13,9 +13,27 @@ class ServicePriceController extends Controller
     // Display a listing of service prices
     public function index()
     {
+        // Retrieve all service prices with related iPhone and repair service details
         $servicePrices = ServicePrice::with(['iphone', 'repairService'])->get();
-        return response()->json($servicePrices);
+    
+        // Initialize an array to hold the structured data
+        $structuredData = [];
+    
+        // Iterate over each service price to structure the data
+        foreach ($servicePrices as $servicePrice) {
+            // Check if the iPhone model is already added to the structured data
+            if (!isset($structuredData[$servicePrice->iphone->model])) {
+                $structuredData[$servicePrice->iphone->model] = [];
+            }
+    
+            // Add the repair service name and price to the iPhone model's array
+            $structuredData[$servicePrice->iphone->model][$servicePrice->repairService->service_name] = $servicePrice->price;
+        }
+    
+        // Return the structured data as JSON
+        return response()->json($structuredData);
     }
+    
 
     // Show the form for creating a new service price
     public function create()
@@ -104,6 +122,8 @@ class ServicePriceController extends Controller
         }
     }
 
+
+    // This method use in landing page to show the price or total price of every repair_service_names
     public function getServicePrice(Request $request)
     {
         $iphoneModel = $request->input('iphone_model');

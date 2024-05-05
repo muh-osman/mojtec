@@ -1998,3 +1998,15 @@ form {
   line-height: 1.6;
   font-size: 13px;
 }
+
+/* Price */
+.price-box {
+  text-align: end;
+  font-size: 20px;
+  color: #777;
+}
+/* Price */
+#price {
+  text-align: end;
+  font-size: 28px;
+}

@@ -480,6 +480,7 @@
               </div>
             </div> -->
 
+            <!-- الخدمات -->
             <div class="cust col-12">
               <div class="form-group cust-2">
                 <label>الخدمة المطلوبة</label>
@@ -489,7 +490,7 @@
                   class="form-check-input"
                   type="checkbox"
                   value="✅"
-                  name="شاشة"
+                  name="صيانة الشاشة"
                   id="reverseCheck1"
                 />
                 <label class="form-check-label" for="reverseCheck1">
@@ -501,7 +502,7 @@
                   class="form-check-input"
                   type="checkbox"
                   value="✅"
-                  name="بطارية"
+                  name="صيانة البطارية"
                   id="reverseCheck2"
                 />
                 <label class="form-check-label" for="reverseCheck2">
@@ -513,7 +514,7 @@
                   class="form-check-input"
                   type="checkbox"
                   value="✅"
-                  name="مدخل الشحن"
+                  name="صيانة مدخل الشحن"
                   id="reverseCheck3"
                 />
                 <label class="form-check-label" for="reverseCheck3">
@@ -525,7 +526,7 @@
                   class="form-check-input"
                   type="checkbox"
                   value="✅"
-                  name="تغليف حراري"
+                  name="بكج حماية حراري كامل"
                   id="reverseCheck9"
                 />
                 <label class="form-check-label" for="reverseCheck9">
@@ -537,7 +538,7 @@
                   class="form-check-input"
                   type="checkbox"
                   value="✅"
-                  name="كاميرا خلفية"
+                  name="صيانه الكاميرا الخلفية"
                   id="reverseCheck4"
                 />
                 <label class="form-check-label" for="reverseCheck4">
@@ -549,7 +550,7 @@
                   class="form-check-input"
                   type="checkbox"
                   value="✅"
-                  name="كاميرا أمامية"
+                  name="صيانة الكاميرا الأمامية"
                   id="reverseCheck5"
                 />
                 <label class="form-check-label" for="reverseCheck5">
@@ -561,7 +562,7 @@
                   class="form-check-input"
                   type="checkbox"
                   value="✅"
-                  name="السماعات"
+                  name="صيانة السماعات العلوية"
                   id="reverseCheck6"
                 />
                 <label class="form-check-label" for="reverseCheck6">
@@ -573,7 +574,7 @@
                   class="form-check-input"
                   type="checkbox"
                   value="✅"
-                  name="زجاج الكاميرا"
+                  name="صيانه زجاج الكاميرا الخلفيه"
                   id="reverseCheck7"
                 />
                 <label class="form-check-label" for="reverseCheck7">
@@ -585,7 +586,7 @@
                   class="form-check-input"
                   type="checkbox"
                   value="✅"
-                  name="الزجاج الخلفي"
+                  name="صيانة كسر الخلفية الزجاجية"
                   id="reverseCheck8"
                 />
                 <label class="form-check-label" for="reverseCheck8">
@@ -594,6 +595,7 @@
               </div>
             </div>
 
+            <!-- الموديلات -->
             <div class="col-12">
               <div class="form-group">
                 <label>موديل الايفون</label>
@@ -653,31 +655,35 @@
 
                   <optgroup dir="ltr" label="──────────"></optgroup>
 
-                  <option value="ipad-7-8-9" dir="ltr">iPad (7, 8, 9)</option>
-                  <option value="ipad-air1-5-6" dir="ltr">
+                  <option value="iPad (7, 8, 9)" dir="ltr">
+                    iPad (7, 8, 9)
+                  </option>
+                  <option value="iPad Air (1, 5, 6)" dir="ltr">
                     iPad Air (1, 5, 6)
                   </option>
-                  <option value="ipad-pro-9-7-air-3" dir="ltr">
+                  <option value="iPad Pro (9.7), iPad Air (3)" dir="ltr">
                     iPad Pro (9.7), iPad Air (3)
                   </option>
-                  <option value="ipad-mini-4-5" dir="ltr">
+                  <option value="iPad Mini (4, 5)" dir="ltr">
                     iPad Mini (4, 5)
                   </option>
-                  <option value="ipad-air2" dir="ltr">iPad Air 2</option>
-                  <option value="ipad-air4" dir="ltr">iPad Air 4</option>
-                  <option value="ipad-mini-6" dir="ltr">iPad Mini 6</option>
-                  <option value="ipad-pro-10-5" dir="ltr">iPad Pro 10.5</option>
-                  <option value="ipad-pro-11inch-2018" dir="ltr">
+                  <option value="iPad Air 2" dir="ltr">iPad Air 2</option>
+                  <option value="iPad Air 4" dir="ltr">iPad Air 4</option>
+                  <option value="iPad Mini 6" dir="ltr">iPad Mini 6</option>
+                  <option value="iPad Pro 10.5" dir="ltr">iPad Pro 10.5</option>
+                  <option value="iPad Pro 11-inch (2018)" dir="ltr">
                     iPad Pro 11-inch (2018)
                   </option>
-                  <option value="ipad-pro-11inch-2021" dir="ltr">
+                  <option value="iPad Pro 11-inch (2021)" dir="ltr">
                     iPad Pro 11-inch (2021)
                   </option>
-                  <option value="ipad-air-4-5" dir="ltr">
+                  <option value="iPad Air (4, 5)" dir="ltr">
                     iPad Air (4, 5)
                   </option>
                 </select>
               </div>
+
+              <h1 class="price-box"><span id="price">0.00</span> ر.س</h1>
             </div>
 
             <!-- <div class="col-md-6 col-12 cust">
@@ -1163,6 +1169,70 @@
         var myModal = new bootstrap.Modal(document.getElementById("ret"));
         myModal.show();
       }
+
+      // Show the price
+      document.addEventListener("DOMContentLoaded", function () {
+        // Function to fetch and update the price
+        function fetchAndUpdatePrice() {
+          // Get the selected iPhone model
+          var iphoneModel = document.querySelector(
+            'select[name="الموديل"]'
+          ).value;
+          // Get the selected repair services
+          var selectedServices = [];
+          document
+            .querySelectorAll(".form-check-input:checked")
+            .forEach(function (checkbox) {
+              selectedServices.push(checkbox.getAttribute("name"));
+            });
+
+          // If no model is selected or no services are checked, set price to 0
+          if (!iphoneModel || selectedServices.length === 0) {
+            document.getElementById("price").textContent = "0.00";
+            return;
+          }
+
+          // Prepare the URL with query parameters
+          var url = new URL("http://localhost:8000/api/get-price");
+          url.searchParams.append("iphone_model", iphoneModel);
+          selectedServices.forEach(function (service) {
+            url.searchParams.append("repair_service_names[]", service);
+          });
+
+          // Fetch the price from the API
+          fetch(url)
+            .then(function (response) {
+              return response.json();
+            })
+            .then(function (data) {
+              if (data.total_price) {
+                // Update the price on the page
+                document.getElementById("price").textContent = data.total_price;
+              } else {
+                // Handle any errors, like service prices not found
+                console.error("Error fetching price:", data.error);
+                document.getElementById("price").textContent = "0";
+              }
+            })
+            .catch(function (error) {
+              console.error("Error fetching price:", error);
+              document.getElementById("price").textContent = "0";
+            });
+        }
+
+        // Add event listeners to the checkboxes and the select dropdown
+        document
+          .querySelectorAll(".form-check-input")
+          .forEach(function (checkbox) {
+            checkbox.addEventListener("change", fetchAndUpdatePrice);
+          });
+        document
+          .querySelector('select[name="الموديل"]')
+          .addEventListener("change", fetchAndUpdatePrice);
+
+        // Initial fetch of the price
+        fetchAndUpdatePrice();
+      });
     </script>
   </body>
 </html>

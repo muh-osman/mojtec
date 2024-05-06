@@ -21,6 +21,7 @@ import DashboardLayout from "./Layout/DashboardLayout";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import Add from "./Pages/Dashboard/Add/Add";
 import Edit from "./Pages/Dashboard/Edit/Edit";
+import Delete from "./Pages/Dashboard/Delete/Delete";
 import NotFound from "./Pages/NotFound/NotFound";
 
 
@@ -50,6 +51,7 @@ export default function App() {
             <Route index element={<Dashboard />} />
             <Route path="add" element={<Add />} />
             <Route path="edit" element={<Edit />} />
+            <Route path="delete" element={<Delete />} />
           </Route>
         {/* End protected route */}
         </Route>

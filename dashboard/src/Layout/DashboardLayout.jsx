@@ -25,6 +25,7 @@ import logo from "../Assets/Images/logo.png";
 import StyleIcon from "@mui/icons-material/Style";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import AutoFixHighIcon from "@mui/icons-material/AutoFixHigh";
+import DeleteIcon from '@mui/icons-material/Delete';
 import AddBoxIcon from "@mui/icons-material/AddBox";
 // React router
 import { Link, useLocation, Outlet, useNavigate } from "react-router-dom";
@@ -72,15 +73,21 @@ function ResponsiveDrawer(props) {
     },
     {
       id: 2,
-      title: "Add",
+      title: "Add device",
       path: "/dashboard/add",
       icon: <AddBoxIcon sx={{ color: "#757575" }} />,
     },
     {
       id: 3,
-      title: "Edit",
+      title: "Edit price",
       path: "/dashboard/edit",
       icon: <AutoFixHighIcon sx={{ color: "#757575" }} />,
+    },
+    {
+      id: 4,
+      title: "Delete device",
+      path: "/dashboard/delete",
+      icon: <DeleteIcon sx={{ color: "#757575" }} />,
     },
   ];
 
@@ -97,7 +104,7 @@ function ResponsiveDrawer(props) {
     <div>
       <Toolbar style={{ justifyContent: "center" }}>
         <Link
-          to="/"
+          to="/dashboard"
           style={{ textDecoration: "none", color: "#fff" }}
         >
           <Stack direction="row" spacing={2} sx={{ alignItems: "center" }}>

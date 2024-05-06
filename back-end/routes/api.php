@@ -69,6 +69,12 @@ Route::apiResource('posts', PostController::class);
 // Routes for iPhone models
 Route::apiResource('iphones', IphoneController::class);
 
+// Add one new device with all its repair prices
+Route::post('iphone-with-services-prices', [IphoneController::class, 'storeWithServices']);
+
+// Delete iphone with all prices that related with it
+Route::post('iphones', [IphoneController::class, 'destroy']);
+
 // Routes for repair services
 Route::apiResource('repair-services', RepairServiceController::class);
 

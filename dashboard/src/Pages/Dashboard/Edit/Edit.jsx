@@ -98,7 +98,7 @@ export default function Edit() {
 
       setLoading(false);
 
-      toast.success("Price updated.");
+      toast.success("Price has been updated.");
     } catch (err) {
       console.error(err);
       setLoading(false);
@@ -124,141 +124,25 @@ export default function Edit() {
       {/* End Toastify */}
       <div className={style.box}>
         <form onSubmit={handleSubmit}>
-          {/* الخدمات */}
-          <div className="cust col-12 mb-4">
-            <div className="form-group cust-2">
-              <h5 dir="rtl">الخدمة المطلوبة:</h5>
-            </div>
+          <h1>تعديل السعر</h1>
+          <div className={style.b}>
+            {/* <!-- الموديلات --> */}
+            <div className="col-12  mb-4">
+              <div className="form-group">
+                <h5 dir="rtl">الموديل:</h5>
+                <select
+                  className="form-control"
+                  name="الموديل"
+                  required
+                  defaultValue=""
+                >
+                  <option dir="rtl" value="" disabled>
+                    اختر أحد الخيارات
+                  </option>
 
-            {services}
+                  {models}
 
-            {/* <div className="form-check form-check-reverse">
-              <input
-                className="form-check-input"
-                type="radio"
-                name="serviceOption"
-                value="صيانة الشاشة"
-                id="reverseCheck1"
-              />
-              <label className="form-check-label" htmlFor="reverseCheck1">
-                صيانة الشاشة
-              </label>
-            </div>
-            <div className="form-check form-check-reverse">
-              <input
-                className="form-check-input"
-                type="radio"
-                name="serviceOption"
-                value="صيانة البطارية"
-                id="reverseCheck2"
-              />
-              <label className="form-check-label" htmlFor="reverseCheck2">
-                صيانة البطارية
-              </label>
-            </div>
-            <div className="form-check form-check-reverse">
-              <input
-                className="form-check-input"
-                type="radio"
-                name="serviceOption"
-                value="صيانة مدخل الشحن"
-                id="reverseCheck3"
-              />
-              <label className="form-check-label" htmlFor="reverseCheck3">
-                صيانة مدخل الشحن
-              </label>
-            </div>
-            <div className="form-check form-check-reverse">
-              <input
-                className="form-check-input"
-                type="radio"
-                name="serviceOption"
-                value="بكج حماية حراري كامل"
-                id="reverseCheck9"
-              />
-              <label className="form-check-label" htmlFor="reverseCheck9">
-                بكج حماية حراري كامل
-              </label>
-            </div>
-            <div className="form-check form-check-reverse">
-              <input
-                className="form-check-input"
-                type="radio"
-                name="serviceOption"
-                value="صيانه الكاميرا الخلفية"
-                id="reverseCheck4"
-              />
-              <label className="form-check-label" htmlFor="reverseCheck4">
-                صيانه الكاميرا الخلفية
-              </label>
-            </div>
-            <div className="form-check form-check-reverse">
-              <input
-                className="form-check-input"
-                type="radio"
-                name="serviceOption"
-                value="صيانة الكاميرا الأمامية"
-                id="reverseCheck5"
-              />
-              <label className="form-check-label" htmlFor="reverseCheck5">
-                صيانة الكاميرا الأمامية
-              </label>
-            </div>
-            <div className="form-check form-check-reverse">
-              <input
-                className="form-check-input"
-                type="radio"
-                name="serviceOption"
-                value="صيانة السماعات العلوية"
-                id="reverseCheck6"
-              />
-              <label className="form-check-label" htmlFor="reverseCheck6">
-                صيانة السماعات العلوية
-              </label>
-            </div>
-            <div className="form-check form-check-reverse">
-              <input
-                className="form-check-input"
-                type="radio"
-                name="serviceOption"
-                value="صيانه زجاج الكاميرا الخلفيه"
-                id="reverseCheck7"
-              />
-              <label className="form-check-label" htmlFor="reverseCheck7">
-                صيانه زجاج الكاميرا الخلفيه
-              </label>
-            </div>
-            <div className="form-check form-check-reverse">
-              <input
-                className="form-check-input"
-                type="radio"
-                name="serviceOption"
-                value="صيانة كسر الخلفية الزجاجية"
-                id="reverseCheck8"
-              />
-              <label className="form-check-label" htmlFor="reverseCheck8">
-                صيانة كسر الخلفية الزجاجية
-              </label>
-            </div> */}
-          </div>
-
-          {/* <!-- الموديلات --> */}
-          <div className="col-12">
-            <div className="form-group">
-              <h5 dir="rtl">موديل الايفون:</h5>
-              <select
-                className="form-control"
-                name="الموديل"
-                required
-                defaultValue=""
-              >
-                <option dir="rtl" value="" disabled>
-                  اختر أحد الخيارات
-                </option>
-
-                {models}
-
-                {/* <option dir="rtl" value>
+                  {/* <option dir="rtl" value>
                   اختر أحد الخيارات
                 </option>
                 <option dir="ltr" value="iPhone 15 Pro Max">
@@ -388,25 +272,149 @@ export default function Edit() {
                 <option value="iPad Air (4, 5)" dir="ltr">
                   iPad Air (4, 5)
                 </option> */}
-              </select>
+                </select>
+              </div>
             </div>
-          </div>
 
-          {/* السعر */}
-          <div className="col-12 mt-4 mb-4">
-            <input
-              className="form-control"
-              placeholder="أدخل السعر الجديد"
-              type="number"
-              dir="rtl"
-              required
-              name="priceInput"
-            />
-          </div>
+            {/* الخدمات */}
+            <div className="cust col-12 mb-4 vv">
+              <div className="form-group cust-2">
+                <h5 dir="rtl">الخدمة:</h5>
+              </div>
 
-          <button disabled={loading} type="submit" className="btn btn-primary">
-            تعديل
-          </button>
+              {services}
+
+              {/* <div className="form-check form-check-reverse">
+              <input
+                className="form-check-input"
+                type="radio"
+                name="serviceOption"
+                value="صيانة الشاشة"
+                id="reverseCheck1"
+              />
+              <label className="form-check-label" htmlFor="reverseCheck1">
+                صيانة الشاشة
+              </label>
+            </div>
+            <div className="form-check form-check-reverse">
+              <input
+                className="form-check-input"
+                type="radio"
+                name="serviceOption"
+                value="صيانة البطارية"
+                id="reverseCheck2"
+              />
+              <label className="form-check-label" htmlFor="reverseCheck2">
+                صيانة البطارية
+              </label>
+            </div>
+            <div className="form-check form-check-reverse">
+              <input
+                className="form-check-input"
+                type="radio"
+                name="serviceOption"
+                value="صيانة مدخل الشحن"
+                id="reverseCheck3"
+              />
+              <label className="form-check-label" htmlFor="reverseCheck3">
+                صيانة مدخل الشحن
+              </label>
+            </div>
+            <div className="form-check form-check-reverse">
+              <input
+                className="form-check-input"
+                type="radio"
+                name="serviceOption"
+                value="بكج حماية حراري كامل"
+                id="reverseCheck9"
+              />
+              <label className="form-check-label" htmlFor="reverseCheck9">
+                بكج حماية حراري كامل
+              </label>
+            </div>
+            <div className="form-check form-check-reverse">
+              <input
+                className="form-check-input"
+                type="radio"
+                name="serviceOption"
+                value="صيانه الكاميرا الخلفية"
+                id="reverseCheck4"
+              />
+              <label className="form-check-label" htmlFor="reverseCheck4">
+                صيانه الكاميرا الخلفية
+              </label>
+            </div>
+            <div className="form-check form-check-reverse">
+              <input
+                className="form-check-input"
+                type="radio"
+                name="serviceOption"
+                value="صيانة الكاميرا الأمامية"
+                id="reverseCheck5"
+              />
+              <label className="form-check-label" htmlFor="reverseCheck5">
+                صيانة الكاميرا الأمامية
+              </label>
+            </div>
+            <div className="form-check form-check-reverse">
+              <input
+                className="form-check-input"
+                type="radio"
+                name="serviceOption"
+                value="صيانة السماعات العلوية"
+                id="reverseCheck6"
+              />
+              <label className="form-check-label" htmlFor="reverseCheck6">
+                صيانة السماعات العلوية
+              </label>
+            </div>
+            <div className="form-check form-check-reverse">
+              <input
+                className="form-check-input"
+                type="radio"
+                name="serviceOption"
+                value="صيانه زجاج الكاميرا الخلفيه"
+                id="reverseCheck7"
+              />
+              <label className="form-check-label" htmlFor="reverseCheck7">
+                صيانه زجاج الكاميرا الخلفيه
+              </label>
+            </div>
+            <div className="form-check form-check-reverse">
+              <input
+                className="form-check-input"
+                type="radio"
+                name="serviceOption"
+                value="صيانة كسر الخلفية الزجاجية"
+                id="reverseCheck8"
+              />
+              <label className="form-check-label" htmlFor="reverseCheck8">
+                صيانة كسر الخلفية الزجاجية
+              </label>
+            </div> */}
+            </div>
+
+            {/* السعر */}
+            <div className="col-12 mt-4 mb-4">
+              <h5 dir="rtl">السعر:</h5>
+              <input
+                className="form-control"
+                placeholder="أدخل السعر الجديد"
+                type="number"
+                dir="rtl"
+                required
+                name="priceInput"
+              />
+            </div>
+
+            <button
+              disabled={loading}
+              type="submit"
+              className="btn btn-primary"
+            >
+              تعديل
+            </button>
+          </div>
         </form>
       </div>
     </div>

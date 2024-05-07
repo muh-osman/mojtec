@@ -28,7 +28,8 @@ import NotFound from "./Pages/NotFound/NotFound";
 export default function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path="/" element={<Layout />}>
+      // I Added "/admin" instead of "/" to make the website work on sub domain "https://mojtec.com/admin/"
+      <Route path="/admin" element={<Layout />}>
 
         <Route element={<HomeLayout />}>
           <Route index element={<Home />} />

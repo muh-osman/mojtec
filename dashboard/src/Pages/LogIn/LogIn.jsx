@@ -36,7 +36,7 @@ function Copyright(props) {
       <Link
         color="inherit"
         component={RouterLink}
-        to="/login"
+        to="/admin/login"
         onMouseOver={(e) => (e.target.style.color = "#7431fa")}
         onMouseOut={(e) => (e.target.style.color = "inherit")}
       >
@@ -90,7 +90,7 @@ export default function LogIn() {
       // console.log(res.data);
       setCookie("verified", res.data.user.email_verified_at);
       setCookie("token", res.data.token);
-      navigate("/dashboard", { replace: true });
+      navigate("/admin/dashboard", { replace: true });
     } catch (err) {
       console.error(err);
       setLoading(false);

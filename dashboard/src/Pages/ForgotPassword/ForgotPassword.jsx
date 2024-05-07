@@ -32,7 +32,7 @@ function Copyright(props) {
       <Link
         color="inherit"
         component={RouterLink}
-        to="/"
+        to="/admin"
         onMouseOver={(e) => (e.target.style.color = "#7431fa")}
         onMouseOut={(e) => (e.target.style.color = "inherit")}
       >

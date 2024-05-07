@@ -68,25 +68,25 @@ function ResponsiveDrawer(props) {
     {
       id: 1,
       title: "Dashboard",
-      path: "/dashboard",
+      path: "/admin/dashboard",
       icon: <DashboardIcon sx={{ color: "#757575" }} />,
     },
     {
       id: 2,
       title: "Add device",
-      path: "/dashboard/add",
+      path: "/admin/dashboard/add",
       icon: <AddBoxIcon sx={{ color: "#757575" }} />,
     },
     {
       id: 3,
       title: "Edit price",
-      path: "/dashboard/edit",
+      path: "/admin/dashboard/edit",
       icon: <AutoFixHighIcon sx={{ color: "#757575" }} />,
     },
     {
       id: 4,
       title: "Delete device",
-      path: "/dashboard/delete",
+      path: "/admin/dashboard/delete",
       icon: <DeleteIcon sx={{ color: "#757575" }} />,
     },
   ];
@@ -104,7 +104,7 @@ function ResponsiveDrawer(props) {
     <div>
       <Toolbar style={{ justifyContent: "center" }}>
         <Link
-          to="/dashboard"
+          to="/admin/dashboard"
           style={{ textDecoration: "none", color: "#fff" }}
         >
           <Stack direction="row" spacing={2} sx={{ alignItems: "center" }}>

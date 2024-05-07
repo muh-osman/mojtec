@@ -973,7 +973,7 @@
 
       // Fetch lists (Services and models)
       function fetchlists() {
-        fetch("http://localhost:8000/api/data")
+        fetch("https://mojtec.com/back-end/public/api/data")
           .then(function (response) {
             return response.json();
           })
@@ -1039,7 +1039,7 @@
               }
 
               // Prepare the URL with query parameters
-              var url = new URL("http://localhost:8000/api/get-price");
+              var url = new URL("https://mojtec.com/back-end/public/api/get-price");
               url.searchParams.append("iphone_model", iphoneModel);
               selectedServices.forEach(function (service) {
                 url.searchParams.append("repair_service_names[]", service);

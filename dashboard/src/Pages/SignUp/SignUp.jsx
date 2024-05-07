@@ -34,7 +34,7 @@ function Copyright(props) {
       <Link
         color="inherit"
         component={RouterLink}
-        to="/"
+        to="/admin"
         onMouseOver={(e) => (e.target.style.color = "#7431fa")}
         onMouseOut={(e) => (e.target.style.color = "inherit")}
       >
@@ -89,7 +89,7 @@ export default function SignUp() {
       setCookie("verified", res.data.user.email_verified_at);
       setCookie("token", res.data.token);
       // console.log(res.data.user.email_verified_at);
-      navigate("/dashboard", { replace: true });
+      navigate("admin/dashboard", { replace: true });
     } catch (err) {
       console.error(err);
       setLoading(false);
@@ -189,7 +189,7 @@ export default function SignUp() {
 
             <Grid container justifyContent="flex-end">
               <Grid item>
-                <Link component={RouterLink} to="/login" variant="body2">
+                <Link component={RouterLink} to="/admin/login" variant="body2">
                   Already have an account? Sign in
                 </Link>
               </Grid>

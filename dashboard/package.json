@@ -1,5 +1,6 @@
 {
   "name": "new-temp",
+  "homepage": "https://mojtec.com/admin",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

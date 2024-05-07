@@ -41,7 +41,7 @@ const pages = [
   // {
   //   id: 1,
   //   title: "Home",
-  //   path: "/",
+  //   path: "/admin",
   // },
 ];
 
@@ -64,7 +64,7 @@ function DrawerAppBar(props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Toolbar style={{ justifyContent: "center" }}>
-        <Link to="/" style={{ textDecoration: "none", color: "#fff" }}>
+        <Link to="/admin" style={{ textDecoration: "none", color: "#fff" }}>
           <Stack direction="row" spacing={2} sx={{ alignItems: "center" }}>
             <Avatar
               alt="Remy Sharp"
@@ -110,7 +110,7 @@ function DrawerAppBar(props) {
                 sx={{ display: { xs: "none", md: "flex" } }}
                 style={{ justifyContent: "center", paddingLeft: 0 }}
               >
-                <Link to="/" style={{ textDecoration: "none", color: "#fff" }}>
+                <Link to="/admin" style={{ textDecoration: "none", color: "#fff" }}>
                   <Stack
                     direction="row"
                     spacing={2}
@@ -148,7 +148,7 @@ function DrawerAppBar(props) {
               {/* <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
                 <Toolbar style={{ justifyContent: "center" }}>
                   <Link
-                    to="/"
+                    to="/admin"
                     style={{ textDecoration: "none", color: "#fff" }}
                   >
                     <Stack

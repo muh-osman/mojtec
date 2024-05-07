@@ -33,7 +33,7 @@ function Copyright(props) {
       <Link
         color="inherit"
         component={RouterLink}
-        to="/"
+        to="/admin"
         onMouseOver={(e) => (e.target.style.color = "#7431fa")}
         onMouseOut={(e) => (e.target.style.color = "inherit")}
       >
@@ -113,7 +113,7 @@ export default function ForgotPassword() {
 
       // Navigate the user to the login page after a delay
       setTimeout(() => {
-        navigate("/login", { replace: true });
+        navigate("admin/login", { replace: true });
       }, 6000); // 3 seconds delay
     } catch (err) {
       console.error(err);

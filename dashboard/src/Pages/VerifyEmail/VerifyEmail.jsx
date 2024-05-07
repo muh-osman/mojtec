@@ -42,7 +42,7 @@ export default function VerifyEmail() {
       {response ? (
         <>
           <h1>{response}</h1>
-          <Link to="/">Go home</Link>
+          <Link to="/admin">Go home</Link>
         </>
       ) : (
         <>

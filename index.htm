@@ -23,6 +23,35 @@
     <!-- <link href="css/loading.css" rel="stylesheet" /> -->
     <link href="css/aos.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
+
+    <!-- Snap Pixel Code -->
+    <script>
+      function onClickSend() {
+        snaptr("track", "PURCHASE");
+      }
+    </script>
+    <script type="text/javascript">
+      (function (e, t, n) {
+        if (e.snaptr) return;
+        var a = (e.snaptr = function () {
+          a.handleRequest
+            ? a.handleRequest.apply(a, arguments)
+            : a.queue.push(arguments);
+        });
+        a.queue = [];
+        var s = "script";
+        r = t.createElement(s);
+        r.async = !0;
+        r.src = n;
+        var u = t.getElementsByTagName(s)[0];
+        u.parentNode.insertBefore(r, u);
+      })(window, document, "https://sc-static.net/scevent.min.js");
+
+      snaptr("init", "17db45dc-7ec7-467f-98c6-b8fa1ebadceb");
+
+      snaptr("track", "PAGE_VIEW");
+    </script>
+    <!-- End Snap Pixel Code -->
   </head>
 
   <body>
@@ -1039,7 +1068,9 @@
               }
 
               // Prepare the URL with query parameters
-              var url = new URL("https://mojtec.com/back-end/public/api/get-price");
+              var url = new URL(
+                "https://mojtec.com/back-end/public/api/get-price"
+              );
               url.searchParams.append("iphone_model", iphoneModel);
               selectedServices.forEach(function (service) {
                 url.searchParams.append("repair_service_names[]", service);
@@ -1094,7 +1125,7 @@
       const btn = document.getElementById("btn");
 
       const scriptURL =
-        "https://script.google.com/macros/s/AKfycbwW9CmXBctrl8NCnGBUp9qCDGGhesqu6q6vf2zeb6D8p0R9jVUkOa4rZKsC_mlRP3o_/exec";
+        "https://script.google.com/macros/s/AKfycbwJC8IQU595yg-BAOGCHSJ0Ql9g30w81645F0eOgOKmrDD9hC6kEFG3RCy7RZ2qzcNwwA/exec";
 
       form.addEventListener("submit", async function (e) {
         e.preventDefault();
@@ -1108,6 +1139,8 @@
           });
           // console.log("Success!", res);
           overlay.style.height = "100%";
+          // Snapchat pixel
+          onClickSend()
         } catch (error) {
           console.error("Error!", error.message);
           btn.innerHTML = "ارسال";

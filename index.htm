@@ -25,11 +25,6 @@
     <link href="css/style.css" rel="stylesheet" />
 
     <!-- Snap Pixel Code -->
-    <script>
-      function onClickSend() {
-        snaptr("track", "PURCHASE");
-      }
-    </script>
     <script type="text/javascript">
       (function (e, t, n) {
         if (e.snaptr) return;
@@ -49,7 +44,30 @@
 
       snaptr("init", "17db45dc-7ec7-467f-98c6-b8fa1ebadceb");
 
-      snaptr("track", "PAGE_VIEW");
+      snaptr("track", "PAGE_VIEW", {
+        item_category: "mobile devices",
+        currency: "SAR",
+        brands: ["iphone", "ipad", "apple"],
+        number_items: 1,
+        geo_country: "Saudi Arabia",
+      });
+    </script>
+
+    <script>
+      function onClickSend() {
+        let firstName = document.getElementById("name").value;
+        let phoneNumber = document.getElementById("phone").value;
+        let price = Number(document.getElementById("price").innerHTML);
+        snaptr("track", "PURCHASE", {
+          firstname: firstName,
+          user_phone_number: phoneNumber,
+          price: price,
+          currency: "SAR",
+          item_category: "mobile devices",
+          number_items: 1,
+          geo_country: "Saudi Arabia",
+        });
+      }
     </script>
     <!-- End Snap Pixel Code -->
   </head>
@@ -450,6 +468,7 @@
                   placeholder="اكتب اسمك"
                   name="الاسم"
                   required
+                  id="name"
                 />
               </div>
             </div>
@@ -464,6 +483,7 @@
                   placeholder="اكتب رقم جوالك"
                   name="الجوال"
                   required
+                  id="phone"
                 />
               </div>
             </div>
@@ -478,6 +498,7 @@
                   placeholder="اكتب العنوان بالتفصيل"
                   name="الحي"
                   required
+                  id="address"
                 />
               </div>
             </div>
@@ -1140,7 +1161,7 @@
           // console.log("Success!", res);
           overlay.style.height = "100%";
           // Snapchat pixel
-          onClickSend()
+          onClickSend();
         } catch (error) {
           console.error("Error!", error.message);
           btn.innerHTML = "ارسال";

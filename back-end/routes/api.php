@@ -10,6 +10,7 @@ use App\Http\Controllers\IphoneController;
 use App\Http\Controllers\RepairServiceController;
 use App\Http\Controllers\ServicePriceController;
 use App\Http\Controllers\DataController;
+use App\Http\Controllers\OrderController;
 
 
 
@@ -81,8 +82,14 @@ Route::apiResource('repair-services', RepairServiceController::class);
 // Routes for service prices
 Route::apiResource('set-price', ServicePriceController::class);
 
-// 
+//
 Route::get('get-price', [ServicePriceController::class, 'getServicePrice']);
 
 // Get all "service_name" and all  iphone "model"
 Route::get('data', [DataController::class, 'getAllData']);
+
+
+// Order
+Route::apiResource('orders', OrderController::class);
+
+

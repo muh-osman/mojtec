@@ -22,10 +22,11 @@ import Button from "@mui/material/Button";
 // Image logo
 import logo from "../Assets/Images/logo.png";
 // MUI icons
-import StyleIcon from "@mui/icons-material/Style";
+// import StyleIcon from "@mui/icons-material/Style";
 import DashboardIcon from "@mui/icons-material/Dashboard";
+import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
 import AutoFixHighIcon from "@mui/icons-material/AutoFixHigh";
-import DeleteIcon from '@mui/icons-material/Delete';
+import DeleteIcon from "@mui/icons-material/Delete";
 import AddBoxIcon from "@mui/icons-material/AddBox";
 // React router
 import { Link, useLocation, Outlet, useNavigate } from "react-router-dom";
@@ -47,7 +48,7 @@ function ResponsiveDrawer(props) {
   const [cookies, setCookie, removeCookie] = useCookies(["token", "verified"]);
 
   //
-  const nav = useNavigate();
+  // const nav = useNavigate();
   //   const [data, setData] = useState([]);
 
   //   async function fetchData() {
@@ -73,18 +74,24 @@ function ResponsiveDrawer(props) {
     },
     {
       id: 2,
+      title: "Prices",
+      path: "/admin/dashboard/prices",
+      icon: <MonetizationOnIcon sx={{ color: "#757575" }} />,
+    },
+    {
+      id: 3,
       title: "Add device",
       path: "/admin/dashboard/add",
       icon: <AddBoxIcon sx={{ color: "#757575" }} />,
     },
     {
-      id: 3,
+      id: 4,
       title: "Edit price",
       path: "/admin/dashboard/edit",
       icon: <AutoFixHighIcon sx={{ color: "#757575" }} />,
     },
     {
-      id: 4,
+      id: 5,
       title: "Delete device",
       path: "/admin/dashboard/delete",
       icon: <DeleteIcon sx={{ color: "#757575" }} />,
@@ -304,7 +311,6 @@ function ResponsiveDrawer(props) {
           flexGrow: 1,
           p: 3,
           width: { sm: `calc(100% - ${drawerWidth}px)` },
-          backgroundColor: "#fbfbfb",
         }}
       >
         <Toolbar />

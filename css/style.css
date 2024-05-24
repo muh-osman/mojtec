@@ -1201,11 +1201,13 @@ ul {
   }
 }
 
-.footer-section ul li a {
+.footer-section ul li a,
+.footer-section ul li button {
   transition: 0.3s;
 }
 
-.footer-section ul li a:hover {
+.footer-section ul li a:hover,
+.footer-section ul li button:hover {
   padding: 0 5px;
   color: #c964a5;
 }

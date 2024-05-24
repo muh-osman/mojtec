@@ -1,4 +1,5 @@
 import style from "./Dashboard.module.scss";
+//
 import * as React from "react";
 import Paper from "@mui/material/Paper";
 import Table from "@mui/material/Table";
@@ -11,6 +12,7 @@ import TableRow from "@mui/material/TableRow";
 import IconButton from "@mui/material/IconButton";
 import DeleteIcon from "@mui/icons-material/Delete";
 import Chip from "@mui/material/Chip"; // Import Chip component
+import CircularProgress from "@mui/material/CircularProgress"; // Import CircularProgress component
 // sweetalert
 import Swal from "sweetalert2";
 // api
@@ -64,19 +66,20 @@ const columns = [
 
 export default function Dashboard() {
   const [rows, setRows] = React.useState([]);
+  const [loadingRows, setLoadingRows] = React.useState({});
+
+  const fetchData = async () => {
+    try {
+      const res = await api.get(`api/orders`);
+      // console.log(res.data);
+
+      setRows(res.data);
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
   React.useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await api.get(`api/orders`);
-        // console.log(res.data);
-
-        setRows(res.data);
-      } catch (err) {
-        console.error(err);
-      }
-    };
-
     fetchData();
   }, []);
 
@@ -109,12 +112,19 @@ export default function Dashboard() {
   };
 
   const handleDelete = async (id) => {
+    // Show loader for the specific row
+    setLoadingRows((prevLoadingRows) => ({ ...prevLoadingRows, [id]: true }));
     try {
       await api.delete(`api/orders/${id}`);
-      const updatedRows = rows.filter((row) => row.id !== id);
-      setRows(updatedRows);
+      // const updatedRows = rows.filter((row) => row.id !== id);
+      // setRows(updatedRows);
+      fetchData();
     } catch (err) {
       console.error(err);
+      setLoadingRows((prevLoadingRows) => ({
+        ...prevLoadingRows,
+        [id]: false,
+      }));
     }
   };
 
@@ -140,6 +150,7 @@ export default function Dashboard() {
               {rows
                 .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                 .map((row) => {
+                  const isLoading = loadingRows[row.id]; // Check loading status for the row
                   return (
                     <TableRow hover role="checkbox" tabIndex={-1} key={row.id}>
                       {columns.map((column) => {
@@ -152,7 +163,14 @@ export default function Dashboard() {
                                 aria-label="delete"
                                 size="large"
                               >
-                                <DeleteIcon fontSize="inherit" color="error" />
+                                {isLoading ? (
+                                  <CircularProgress size={24} color="error" /> // Show loader for specific row
+                                ) : (
+                                  <DeleteIcon
+                                    fontSize="inherit"
+                                    color="error"
+                                  />
+                                )}
                               </IconButton>
                             ) : column.id === "phone_number" ? (
                               <a href={`tel:${value}`}>{value}</a>

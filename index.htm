@@ -903,18 +903,14 @@
             }
           );
 
-          // console.log(name);
-          // console.log(phoneNumber);
-          // console.log(address);
-          // console.log(selectedValues);
-          // console.log(total);
-          // console.log(model);
-          // console.log(notes);
-
-          // console.log("Success!", res);
-          overlay.style.height = "100%";
-          // Snapchat & tiktok pixel
-          onClickSend();
+          if (res.ok) {
+            overlay.style.height = "100%";
+            btn.innerHTML = "تم الارسال";
+            btn.disabled = true;
+            btn.style.background = "#777";
+            // Snapchat & tiktok pixel
+            onClickSend();
+          }
         } catch (error) {
           console.error("Error!", error.message);
           btn.innerHTML = "ارسال";

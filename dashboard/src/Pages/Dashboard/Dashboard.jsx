@@ -1,14 +1,13 @@
 import style from "./Dashboard.module.scss";
 //
 import * as React from "react";
-import Paper from "@mui/material/Paper";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
-import TablePagination from "@mui/material/TablePagination";
 import TableRow from "@mui/material/TableRow";
+import Paper from "@mui/material/Paper";
 import IconButton from "@mui/material/IconButton";
 import DeleteIcon from "@mui/icons-material/Delete";
 import Chip from "@mui/material/Chip"; // Import Chip component
@@ -18,52 +17,6 @@ import Swal from "sweetalert2";
 // api
 import api from "../../Utils/Api";
 
-const columns = [
-  { id: "name", label: "Name", minWidth: 170, align: "center" },
-  {
-    id: "phone_number",
-    label: "Phone",
-    minWidth: 100,
-    align: "center",
-  },
-  {
-    id: "address",
-    label: "Address",
-    minWidth: 170,
-    align: "center",
-  },
-  {
-    id: "services",
-    label: "Services",
-    minWidth: 170,
-    align: "center",
-  },
-  {
-    id: "model",
-    label: "Model",
-    minWidth: 170,
-    align: "center",
-  },
-  {
-    id: "total",
-    label: "Total",
-    minWidth: 170,
-    align: "center",
-  },
-  {
-    id: "notes",
-    label: "Note",
-    minWidth: 170,
-    align: "center",
-  },
-  {
-    id: "action",
-    label: "Action",
-    minWidth: 100,
-    align: "center",
-  },
-];
-
 export default function Dashboard() {
   const [rows, setRows] = React.useState([]);
   const [loadingRows, setLoadingRows] = React.useState({});
@@ -72,7 +25,6 @@ export default function Dashboard() {
     try {
       const res = await api.get(`api/orders`);
       // console.log(res.data);
-
       setRows(res.data);
     } catch (err) {
       console.error(err);
@@ -83,16 +35,17 @@ export default function Dashboard() {
     fetchData();
   }, []);
 
-  const [page, setPage] = React.useState(0);
-  const [rowsPerPage, setRowsPerPage] = React.useState(10);
-
-  const handleChangePage = (event, newPage) => {
-    setPage(newPage);
-  };
-
-  const handleChangeRowsPerPage = (event) => {
-    setRowsPerPage(+event.target.value);
-    setPage(0);
+  // Helper function to format the date
+  const formatDate = (laravelTimestamp) => {
+    const dateObject = new Date(laravelTimestamp);
+    return new Intl.DateTimeFormat("en-GB", {
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: true,
+    }).format(dateObject);
   };
 
   const deleteAlert = (id) => {
@@ -130,82 +83,69 @@ export default function Dashboard() {
 
   return (
     <div className={style.container}>
-      <Paper sx={{ width: "100%", overflow: "hidden" }}>
-        <TableContainer sx={{ maxHeight: 440 }}>
-          <Table stickyHeader aria-label="sticky table">
-            <TableHead>
-              <TableRow>
-                {columns.map((column) => (
-                  <TableCell
-                    key={column.id}
-                    align={column.align}
-                    style={{ minWidth: column.minWidth }}
-                  >
-                    {column.label}
+      <TableContainer component={Paper}>
+        <Table sx={{ minWidth: 650 }} aria-label="simple table">
+          <TableHead>
+            <TableRow>
+              <TableCell>Date</TableCell>
+              <TableCell>Name</TableCell>
+              <TableCell>Phone</TableCell>
+              <TableCell>Address</TableCell>
+              <TableCell>Services</TableCell>
+              <TableCell>Model</TableCell>
+              <TableCell>Total</TableCell>
+              <TableCell>Note</TableCell>
+              <TableCell>Action</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {rows.map((row) => {
+              const isLoading = loadingRows[row.id]; // Check loading status for the row
+              return (
+                <TableRow
+                  key={row.id}
+                  sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                >
+                  <TableCell>{formatDate(row.created_at)}</TableCell>
+                  <TableCell>{row.name}</TableCell>
+                  <TableCell>
+                    <a href={`tel:${row.phone_number}`}>{row.phone_number}</a>
                   </TableCell>
-                ))}
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {rows
-                .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-                .map((row) => {
-                  const isLoading = loadingRows[row.id]; // Check loading status for the row
-                  return (
-                    <TableRow hover role="checkbox" tabIndex={-1} key={row.id}>
-                      {columns.map((column) => {
-                        const value = row[column.id];
-                        return (
-                          <TableCell key={column.id} align={column.align}>
-                            {column.id === "action" ? (
-                              <IconButton
-                                onClick={() => deleteAlert(row.id)}
-                                aria-label="delete"
-                                size="large"
-                              >
-                                {isLoading ? (
-                                  <CircularProgress size={24} color="error" /> // Show loader for specific row
-                                ) : (
-                                  <DeleteIcon
-                                    fontSize="inherit"
-                                    color="error"
-                                  />
-                                )}
-                              </IconButton>
-                            ) : column.id === "phone_number" ? (
-                              <a href={`tel:${value}`}>{value}</a>
-                            ) : column.id === "services" ? (
-                              value
-                                .split(",")
-                                .map((service, index) => (
-                                  <Chip
-                                    key={index}
-                                    label={service.trim()}
-                                    sx={{ margin: "5px" }}
-                                  />
-                                ))
-                            ) : (
-                              value
-                            )}
-                          </TableCell>
-                        );
-                      })}
-                    </TableRow>
-                  );
-                })}
-            </TableBody>
-          </Table>
-        </TableContainer>
-        <TablePagination
-          rowsPerPageOptions={[10, 25, 100]}
-          component="div"
-          count={rows.length}
-          rowsPerPage={rowsPerPage}
-          page={page}
-          onPageChange={handleChangePage}
-          onRowsPerPageChange={handleChangeRowsPerPage}
-        />
-      </Paper>
+                  <TableCell>{row.address}</TableCell>
+                  <TableCell>
+                    {row.services.split(",").map((service, index) => (
+                      <Chip
+                        key={index}
+                        label={service.trim()}
+                        sx={{ margin: "5px" }}
+                      />
+                    ))}
+                  </TableCell>
+                  <TableCell>
+                    <Chip label={row.model} variant="outlined" />
+                  </TableCell>
+                  <TableCell>{row.total}</TableCell>
+                  <TableCell>{row.notes}</TableCell>
+                  <TableCell>
+                    <IconButton
+                      onClick={() => deleteAlert(row.id)}
+                      aria-label="delete"
+                      size="large"
+                    >
+                      {isLoading ? (
+                        // Show loader for specific row
+                        <CircularProgress size={24} color="error" />
+                      ) : (
+                        <DeleteIcon fontSize="inherit" color="error" />
+                      )}
+                    </IconButton>
+                  </TableCell>
+                </TableRow>
+              );
+            })}
+          </TableBody>
+        </Table>
+      </TableContainer>
     </div>
   );
 }

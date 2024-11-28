@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+﻿﻿<!DOCTYPE html>
 <html lang="ar">
   <head>
     <meta charset="utf-8" />
@@ -42,54 +42,9 @@
         u.parentNode.insertBefore(r, u);
       })(window, document, "https://sc-static.net/scevent.min.js");
 
-      snaptr("init", "17db45dc-7ec7-467f-98c6-b8fa1ebadceb");
-
-      snaptr("track", "PAGE_VIEW", {
-        item_category: "mobile devices",
-        currency: "SAR",
-        brands: ["iphone", "ipad", "apple"],
-        number_items: 1,
-        geo_country: "Saudi Arabia",
-      });
+      snaptr("init", "b0d60270-99ab-4472-813f-105a4218e389");
     </script>
-
-    <script>
-      function onClickSend() {
-        let firstName = document.getElementById("name").value;
-        let phoneNumber = document.getElementById("phone").value;
-        let price = Number(document.getElementById("price").innerHTML);
-
-        // Snapchat pixel (submit form)
-        snaptr("track", "PURCHASE", {
-          firstname: firstName,
-          user_phone_number: phoneNumber,
-          price: price,
-          currency: "SAR",
-          item_category: "mobile devices",
-          number_items: 1,
-          geo_country: "Saudi Arabia",
-        });
-
-        // TikTok pixel (submit form)
-        ttq.track("SubmitForm", {
-          contents: [
-            {
-              content_type: "product", // string. Either product or product_group.
-              content_name: "mojtec landing page", // string. The name of the page or product. Example: "shirt".
-              content_category: "Consumer electronics", // string. The category of the page or product. Example: "apparel".
-              price: price, // number. The price of a single item. Example: 25.
-              brand: "apple", // string. The brand name of the page or product. Example: "Nike".
-            },
-          ],
-          value: price, // number. Value of the order or items sold. Example: 100.
-          currency: "SAR", // string. The 4217 currency code. Example: "USD".
-        });
-
-        ttq.identify({
-          phone_number: phoneNumber, // string. The phone number of the customer if available. It must be hashed with SHA-256 on the client side.
-        });
-      }
-    </script>
+    <!-- End Snap Pixel Code -->
 
     <!-- Tiktok pixel -->
     <script>
@@ -570,11 +525,7 @@
     <!--end footer section-->
 
     <!--startt whatsapp icon section-->
-    <a
-      class="sticky-icon"
-      target="_blank"
-      href="https://wa.me/966564999884"
-    >
+    <a class="sticky-icon" target="_blank" href="https://wa.me/966564999884">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="32"
@@ -927,6 +878,45 @@
       function openReturn() {
         var myModal = new bootstrap.Modal(document.getElementById("ret"));
         myModal.show();
+      }
+    </script>
+
+    <script>
+      function onClickSend() {
+        let firstName = document.getElementById("name").value;
+        let phoneNumber = document.getElementById("phone").value;
+        let price = Number(document.getElementById("price").innerHTML);
+
+        // Snapchat pixel (submit form)
+        snaptr("track", "PURCHASE", {
+          firstname: firstName,
+          user_phone_number: phoneNumber,
+          price: price,
+          currency: "SAR",
+          item_category: "mobile devices",
+          number_items: 1,
+          geo_country: "Saudi Arabia",
+          brands: ["apple"],
+        });
+
+        // TikTok pixel (submit form)
+        ttq.track("SubmitForm", {
+          contents: [
+            {
+              content_type: "product", // string. Either product or product_group.
+              content_name: "mojtec landing page", // string. The name of the page or product. Example: "shirt".
+              content_category: "Consumer electronics", // string. The category of the page or product. Example: "apparel".
+              price: price, // number. The price of a single item. Example: 25.
+              brand: "apple", // string. The brand name of the page or product. Example: "Nike".
+            },
+          ],
+          value: price, // number. Value of the order or items sold. Example: 100.
+          currency: "SAR", // string. The 4217 currency code. Example: "USD".
+        });
+
+        ttq.identify({
+          phone_number: phoneNumber, // string. The phone number of the customer if available. It must be hashed with SHA-256 on the client side.
+        });
       }
     </script>
   </body>
